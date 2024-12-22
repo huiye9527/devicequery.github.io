@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="static/images/favicon.png" type="image/x-icon">
+    <meta name="description" content="UDID查询工具 - 快速查询iOS设备信息，包括设备型号、序列号等。专业的设备信息查询服务，支持所有iOS设备。">
+    <meta name="keywords" content="UDID查询,iOS设备查询,设备信息查询,iPhone序列号,设备型号查询,Apple设备查询">
+    <meta name="author" content="ahui">
+    <meta property="og:title" content="UDID设备信息查询">
+    <meta property="og:description" content="专业的iOS设备信息查询工具，快速获取设备详细信息">
+    <meta property="og:type" content="website">
+    <title>设备信息查询</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="static/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="copy-toast" id="copyToast">已复制</div>
+        <div class="search-container">
+            <h1><i class="fas fa-mobile-alt"></i> 设备信息查询</h1>
+            <div class="search-box">
+                <input type="text" id="udidInput" placeholder="请输入设备UDID...">
+                <button id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="loading-animation" id="loading">
+                <div class="spinner"></div>
+            </div>
+            <div class="error-message" id="errorMessage"></div>
+        </div>
+
+        <div class="result-container" id="resultContainer">
+            <div class="device-info">
+                <div class="device-header">
+                    <i class="fas fa-info-circle"></i>
+                    <h2>设备信息</h2>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item device-number">
+                        <i class="fas fa-microchip"></i>
+                        <span class="label">设备编号</span>
+                        <span class="value" id="deviceNumber">-</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-mobile"></i>
+                        <span class="label">设备型号</span>
+                        <span class="value" id="model">-</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-tablet"></i>
+                        <span class="label">设备类型</span>
+                        <span class="value" id="deviceClass">-</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-apple"></i>
+                        <span class="label">平台</span>
+                        <span class="value" id="devicePlatform">-</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-barcode"></i>
+                        <span class="label">序列号</span>
+                        <span class="value" id="serialNumber">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Copyright © <span id="year"></span> UDID查询 | Technical Support by <a href="https://www.ahfi.cn/author/1" target="_blank">@ahui</a></p>
+    </footer>
+    <script src="static/js/index.js"></script>
+</body>
+</html>
